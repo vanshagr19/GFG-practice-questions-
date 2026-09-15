@@ -28,16 +28,8 @@ class Solution {
                 k=j;
                 j=j.next;
             }
-            while( i!=null && j ==null){
-                k.next =i ;
-                k=i;
-                i = i.next;
-            }
-            while( j !=null && i ==null){
-               k.next =j;
-                k=j;
-                j=j.next; 
-            }
+            if (i==null) k.next = j;
+            else k.next =i;
         }
         return dummy.next;
     }
